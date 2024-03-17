@@ -22,28 +22,17 @@ function readLine() {
     return inputString[currentLine++];
 }
 
-/*
- * Complete the vowelsAndConsonants function.
- * Print your output using 'console.log()'.
- */
-function vowelsAndConsonants(s) {
-    let vowels=["a","e","i","o","u"]
-    for(let v of s){
-        if(vowels.includes(v)){
-            console.log(v);
-        }
-    }
-    for(let v of s){
-        if(!vowels.includes(v)){
-            console.log(v);
-        }
-    }
-    
+function factorial(n){
+    let f=1;
+    for(let i=1;i<=n;i++){
+        f=f*i;
+    }   
+    return f;
 }
 
 
 function main() {
-    const s = readLine();
+    const n = +(readLine());
     
-    vowelsAndConsonants(s);
+    console.log(factorial(n));
 }
